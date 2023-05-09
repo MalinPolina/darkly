@@ -1,0 +1,29 @@
+Run nikto:
+
+`
+polina@DESKTOP-87RT6O2:~/LifeAfterCircles/darkly$  nikto -p 80 -host 192.168.31.133
+- Nikto v2.1.5
+---------------------------------------------------------------------------
++ Target IP:          192.168.31.133
++ Target Hostname:    192.168.31.133
++ Target Port:        80
++ Start Time:         2023-05-09 17:21:27 (GMT3)
+---------------------------------------------------------------------------
++ Server: nginx/1.4.6 (Ubuntu)
++ Cookie I_am_admin created without the httponly flag
++ Retrieved x-powered-by header: PHP/5.5.9-1ubuntu4.29
++ The anti-clickjacking X-Frame-Options header is not present.
++ Server leaks inodes via ETags, header found with file /lTjbVLX8.types, fields: 0x60db63b9 0x3cf
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ OSVDB-3268: /whatever/: Directory indexing found.
++ File/dir '/whatever/' in robots.txt returned a non-forbidden or redirect HTTP code (200)
++ File/dir '/.hidden' in robots.txt returned a non-forbidden or redirect HTTP code (301)
++ "robots.txt" contains 2 entries which should be manually viewed.
++ OSVDB-3092: /admin/: This might be interesting...
++ OSVDB-3092: /includes/: This might be interesting...
++ OSVDB-3093: /admin/index.php: This might be interesting... has been seen in web logs from an unknown scanner.
++ 6544 items checked: 9 error(s) and 11 item(s) reported on remote host
++ End Time:           2023-05-09 17:21:40 (GMT3) (13 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+`
