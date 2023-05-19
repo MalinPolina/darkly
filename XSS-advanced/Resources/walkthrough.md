@@ -1,4 +1,4 @@
-# XSS
+# XSS advanced
 We find the only clickable image on the site -> click on it
 http://[VM_IP]/?page=media&src=nsa
 
