@@ -1,6 +1,6 @@
 # Spoof(curl)
 
-If we click on `Born2Sec` at the bottom of the page we get to <http://192.168.31.135/?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f>
+If we click on `Born2Sec` at the bottom of the page we get to <http://[VM_IP]/?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f>
 
 In the source code on this page we can find the following comments (some are more relevant than others):
 ```
@@ -47,7 +47,7 @@ We have our flag
 
 ## Explanation
 
-Attack type: [Host Header AttacK](https://portswigger.net/web-security/host-header)
+Attack type: [Host Header Attack](https://portswigger.net/web-security/host-header)
 
 ## How to fix it
 

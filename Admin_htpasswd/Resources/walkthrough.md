@@ -1,7 +1,7 @@
 # Admin(htpasswd)
 
-If we go to <http://192.168.31.135/robots.txt> we will find 2 folders disallowed - `/whatever` and `/.hidden`.
-Let's check <http://192.168.31.135/whatever/>
+If we go to <http://[VM_IP]/robots.txt> we will find 2 folders disallowed - `/whatever` and `/.hidden`.  
+Let's check <http://[VM_IP]/whatever/>
 
 ```
 daniseed@DESKTOP:~/darkly$  curl -v 192.168.31.135/whatever/
@@ -79,7 +79,7 @@ We have login-password combination: `root:437394baff5aa33daa618be47b75cb49`
 But it doesn't work on its own. So lets try and dehash it with [crackstation](https://crackstation.net/).
 The password is encrypted with md5 - `qwerty123@`
 
-Input this on <http://192.168.31.135/admin/> and we have our flag
+Input this on <http://[VM_IP]/admin/> and we have our flag
 
 ## Explanation
 
