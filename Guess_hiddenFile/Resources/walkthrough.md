@@ -1,14 +1,14 @@
 # Guess(hidden file)
 
-If we go to <http://192.168.31.133/robots.txt> we will find 2 folders disallowed - `/whatever` and `/.hidden`.
-Let's check <http://192.168.31.133/.hidden/>
+If we go to <http://192.168.31.135/robots.txt> we will find 2 folders disallowed - `/whatever` and `/.hidden`.
+Let's check <http://192.168.31.135/.hidden/>
 
 Here we have folders within folders with README files in them. Let's write a script to recursively traverse them, retrive README files and look in them for a flag.
 
 DOESN'T WORK FOR ME
 
 README with a flag: 
-<http://192.168.31.133/.hidden/whtccjokayshttvxycsvykxcfm/igeemtxnvexvxezqwntmzjltkt/lmpanswobhwcozdqixbowvbrhw/README>
+<http://192.168.31.135/.hidden/whtccjokayshttvxycsvykxcfm/igeemtxnvexvxezqwntmzjltkt/lmpanswobhwcozdqixbowvbrhw/README>
 
 > Hey, here is your flag : d5eec3ec36cf80dce44a896f961c1831a05526ec215693c8f2c39543497d4466
 

