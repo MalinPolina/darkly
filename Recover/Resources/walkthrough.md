@@ -1,6 +1,6 @@
 # Recover
 
-Go to `Sign In` page <http://192.168.31.135/?page=signin> and then to <http://192.168.31.135/?page=recover#> by clicking `I forgot my password`. If we click `Submit` nothing happens.
+Go to `Sign In` page <http://[VM_IP]/?page=signin> and then to <http://[VM_IP]/?page=recover#> by clicking `I forgot my password`. If we click `Submit` nothing happens.
 
 Let's look at the source code on recover page. We have a hidden input for submit:
 
