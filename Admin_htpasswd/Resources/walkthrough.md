@@ -1,6 +1,6 @@
 # Admin(htpasswd)
 
-If we go to <http://192.168.31.135/robots.txt> we will find 2 folders disallowed - `/whatever` and `/.hidden`.
+If we go to <http://192.168.31.135/robots.txt> we will find 2 folders disallowed - `/whatever` and `/.hidden`.  
 Let's check <http://192.168.31.135/whatever/>
 
 ```
