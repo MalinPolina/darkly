@@ -1,6 +1,9 @@
 # Admin(htpasswd)
 
-If we go to <http://[VM_IP]/robots.txt> we will find 2 folders disallowed - `/whatever` and `/.hidden`.  
+If we go to <http://[VM_IP]/robots.txt> we will find 2 folders disallowed - `/whatever` and `/.hidden`.
+
+![whatever](./img/whatever.png)
+
 Let's check <http://[VM_IP]/whatever/>
 
 ```
@@ -80,6 +83,10 @@ But it doesn't work on its own. So lets try and dehash it with [crackstation](ht
 The password is encrypted with md5 - `qwerty123@`
 
 Input this on <http://[VM_IP]/admin/> and we have our flag
+
+![rootLogin](./img/rootLogin.png)
+
+![flag](./img/flag.png)
 
 ## Explanation
 

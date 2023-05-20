@@ -2,6 +2,10 @@
 
 If we click on `Born2Sec` at the bottom of the page we get to <http://[VM_IP]/?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f>
 
+![Born2Sec](./img/Born2Sec.png)
+
+![albatros](./img/albatros.png)
+
 In the source code on this page we can find the following comments (some are more relevant than others):
 ```
 <!--

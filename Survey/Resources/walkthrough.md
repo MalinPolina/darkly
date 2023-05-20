@@ -2,6 +2,8 @@
 
 On the Survey page <http://[VM_IP]/?page=survey> you can grade wil, alex, Thor, Ben, ol.
 
+![survey](./img/survey.png)
+
 If we look on source code we see that an expected grade is between 1 and 10:
 ```
 <form action="#" method="post">
@@ -41,7 +43,11 @@ We can try changing survey value to 42, for example, and sending it.
 </form>
 ```
 
+![grades](./img/grades.png)
+
 We have our flag
+
+![flag](./img/flag.png)
 
 ## Explanation
 

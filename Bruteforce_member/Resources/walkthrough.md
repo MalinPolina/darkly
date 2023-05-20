@@ -23,6 +23,11 @@ We have admin's password: `shadow`
 
 Input `admin:shadow` into Login page and we have our flag
 
+![adminLogin](./img/adminLogin.png)
+
+
+![flag](./img/flag.png)
+
 ## Explanation
 
 Attack type: [Brute force attack](https://owasp.org/www-community/controls/Blocking_Brute_Force_Attacks)

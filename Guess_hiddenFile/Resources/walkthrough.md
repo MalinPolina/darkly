@@ -3,9 +3,9 @@
 If we go to <http://[VM_IP]/robots.txt> we will find 2 folders disallowed - `/whatever` and `/.hidden`.
 Let's check <http://[VM_IP]/.hidden/>
 
-Here we have folders within folders with README files in them. Let's write a script to recursively traverse them, retrive README files and look in them for a flag.
+![hidden](./img/hidden.png)
 
-DOESN'T WORK FOR ME
+Here we have folders within folders with README files in them. Let's write a [script](./scrapper.py) to recursively traverse them, retrive README files and look in them for a flag.
 
 README with a flag: 
 <http://[VM_IP]/.hidden/whtccjokayshttvxycsvykxcfm/igeemtxnvexvxezqwntmzjltkt/lmpanswobhwcozdqixbowvbrhw/README>

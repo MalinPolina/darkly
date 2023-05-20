@@ -1,6 +1,10 @@
 # Recover
 
-Go to `Sign In` page <http://[VM_IP]/?page=signin> and then to <http://[VM_IP]/?page=recover#> by clicking `I forgot my password`. If we click `Submit` nothing happens.
+Go to `Sign In` page <http://[VM_IP]/?page=signin> and then to <http://[VM_IP]/?page=recover#> by clicking `I forgot my password`. 
+
+![login](./img/login.png)
+
+If we click `Submit` nothing much happens. 
 
 Let's look at the source code on recover page. We have a hidden input for submit:
 
@@ -13,10 +17,14 @@ Let's look at the source code on recover page. We have a hidden input for submit
 [...]
 ```
 
+![recover](./img/recover.png)
+
 So the recovery password is sent to *webmaster@borntosec.com*.
 We can remove this hidden input with developer tools in Source and then click on `Submit`.
 
 We have our flag
+
+![flag](./img/flag.png)
 
 ## Explanation
 
