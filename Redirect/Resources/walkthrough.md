@@ -15,11 +15,11 @@ As you can see from the markup code, the redirect page is used with the site par
     </li>
 </ul>
 ```
-
-By changing the site parameter to your own, we get a flag.
 ![redirect](./img/redirect.png)
+By changing the site parameter to your own, we get a flag.
+
 ## Explanation
-Attack type: [Unvalidated Redirects](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html): Unvalidated Redirects
+Attack type: [Unvalidated Redirects](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html)
 > Unvalidated redirects and forwards are possible when a web application accepts untrusted input that could cause the web application to redirect the request to a URL contained within untrusted input.
 > By modifying untrusted URL input to a malicious site, an attacker may successfully launch a phishing scam and steal user credentials.
 

@@ -1,6 +1,5 @@
 import requests
 import re
-# Lib for scrapping info from web pages 
 import bs4 as bs
 
 def isFlag(url):
@@ -13,12 +12,9 @@ def isFlag(url):
         return None
 
 def scrapper(url):
-    # Save result of GET to res
 	getRes = requests.get(url)
-    # Get whole html 
 	page = bs.BeautifulSoup(getRes.text, 'html.parser')
 	if (page is not None):
-        # save everything with tafg `a`
 		links = page.find_all("a")
 		for link in links:
 			readme = link.get('href')
@@ -30,4 +26,4 @@ def scrapper(url):
 			elif (readme != "../"):
 				scrapper(url + readme)
 
-scrapper("http://192.168.31.135/.hidden/")
+scrapper("http://192.168.56.106/.hidden/") # Change to yor VM IP address
