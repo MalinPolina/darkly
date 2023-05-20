@@ -21,7 +21,7 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2023-05-18 01:03:
 
 We have admin's password: `shadow`
 
-Input `admin:password` into Login page and we have our flag
+Input `admin:shadow` into Login page and we have our flag
 
 ## Explanation
 
