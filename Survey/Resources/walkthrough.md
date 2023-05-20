@@ -1,6 +1,6 @@
 # Survey
 
-On the Survey page <http://192.168.31.135/?page=survey> you can grade wil, alex, Thor, Ben, ol.
+On the Survey page <http://[VM_IP]/?page=survey> you can grade wil, alex, Thor, Ben, ol.
 
 If we look on source code we see that an expected grade is between 1 and 10:
 ```
