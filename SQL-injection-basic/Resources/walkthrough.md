@@ -60,7 +60,7 @@ borntosec.ddns.net/images.pngHack me ?If you read this just use this md5 decode 
 So, we just follow this instructions.
 
 ## Explanation
-Attack type: [SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection): SQL Injection
+Attack type: [SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
 > A SQL injection attack consists of insertion or “injection” of a SQL query via the input data from the client to the application.
 > A successful SQL injection exploit can read sensitive data from the database, modify database data (Insert/Update/Delete),
 > execute administration operations on the database (such as shutdown the DBMS), recover the content of a given file present
