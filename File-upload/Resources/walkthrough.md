@@ -4,7 +4,7 @@
 On the page ```http://[VM_IP]/?page=upload```
 Let's try to transfer an empty python script instead of a picture using curl.
 ```
-curl -F "Upload=send" -F "uploaded=@empty.py;type=image/jpeg" http://192.168.56.106/index.php\?page\=upload
+curl -F "Upload=send" -F "uploaded=@empty.py;type=image/jpeg" http://[VM_IP]/index.php\?page\=upload
 ```
 
 So, we get the flag

@@ -40,7 +40,7 @@ So we have to change our header to make it look like we are coming from <https:/
 
 With `curl` we can do exactly that using flags -A (Specify the User-Agent) and -e (Sends the "Referer Page") information to the HTTP server:
 ```
-daniseed@DESKTOP:~/darkly$ curl -e https://www.nsa.gov/ -A "ft_bornToSec" "http://192.168.31.135/?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f"  | grep flag
+daniseed@DESKTOP:~/darkly$ curl -e https://www.nsa.gov/ -A "ft_bornToSec" "http://[VM_IP]/?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f"  | grep flag
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100  6041    0  6041    0     0   737k      0 --:--:-- --:--:-- --:--:--  737k

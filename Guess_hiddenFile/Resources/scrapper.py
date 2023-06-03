@@ -26,4 +26,4 @@ def scrapper(url):
 			elif (readme != "../"):
 				scrapper(url + readme)
 
-scrapper("http://192.168.56.106/.hidden/") # Change to yor VM IP address
+scrapper("http://[VM_IP]/.hidden/") # Change to yor VM IP address

